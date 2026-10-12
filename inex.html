@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+  <title>AlgoVerse | Algorithm Intelligence Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-grid"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <header class="navbar">
+    <a href="#home" class="logo"><span>◈</span> AlgoVerse</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#algorithms">Algorithms</a>
+      <a href="#visualizer">Visualizer</a>
+      <a href="#complexity">Complexity</a>
+    </nav>
+    <a href="#visualizer" class="nav-button">Launch Lab ↗</a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <div class="status">
+          <span class="pulse"></span>
+          ALGORITHM INTELLIGENCE LAB
+        </div>
+
+        <h1>Think in Algorithms.<br>
+          <span class="gradient-text">Build the Future.</span>
+        </h1>
+
+        <p class="hero-description">
+          Explore the science behind efficient code. Visualize algorithms,
+          understand complexity, and turn complex logic into clear insights.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#visualizer" class="primary-button">Explore Algorithms ↗</a>
+          <a href="#complexity" class="secondary-button">Explore Big O</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>03+</strong><span>Live Sorts</span></div>
+          <div><strong>O(n)</strong><span>Think Efficient</span></div>
+          <div><strong>∞</strong><span>Possibilities</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="code-window">
+          <div class="window-top">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>algorithm.js</span>
+            <span class="live-label">● LIVE</span>
+          </div>
+          <div class="code-content">
+            <div><span class="line">01</span> <span class="purple">function</span> <span class="cyan">binarySearch</span>(arr, target) {</div>
+            <div><span class="line">02</span> &nbsp; <span class="purple">let</span> low = <span class="orange">0</span>;</div>
+            <div><span class="line">03</span> &nbsp; <span class="purple">let</span> high = arr.length - <span class="orange">1</span>;</div>
+            <div><span class="line">04</span></div>
+            <div><span class="line">05</span> &nbsp; <span class="purple">while</span> (low &lt;= high) {</div>
+            <div><span class="line">06</span> &nbsp; &nbsp; <span class="purple">const</span> mid = Math.floor(</div>
+            <div><span class="line">07</span> &nbsp; &nbsp; &nbsp; (low + high) / <span class="orange">2</span></div>
+            <div><span class="line">08</span> &nbsp; &nbsp; );</div>
+            <div><span class="line">09</span></div>
+            <div><span class="line">10</span> &nbsp; &nbsp; <span class="purple">if</span> (arr[mid] === target)</div>
+            <div><span class="line">11</span> &nbsp; &nbsp; &nbsp; <span class="purple">return</span> mid;</div>
+            <div><span class="line">12</span></div>
+            <div><span class="line">13</span> &nbsp; &nbsp; <span class="comment">// Reduce search space</span></div>
+            <div><span class="line">14</span> &nbsp; &nbsp; <span class="purple">if</span> (arr[mid] &lt; target)</div>
+            <div><span class="line">15</span> &nbsp; &nbsp; &nbsp; low = mid + <span class="orange">1</span>;</div>
+            <div><span class="line">16</span> &nbsp; &nbsp; <span class="purple">else</span> high = mid - <span class="orange">1</span>;</div>
+            <div><span class="line">17</span> &nbsp; }</div>
+            <div><span class="line">18</span> &nbsp; <span class="purple">return</span> -<span class="orange">1</span>;</div>
+            <div><span class="line">19</span> }</div>
+          </div>
+          <div class="code-footer">
+            <span>◈ AAD / DAA LAB</span>
+            <span>Time: O(log n)</span>
+          </div>
+        </div>
+        <div class="floating-card floating-top">⚡ <span>Optimized Logic</span></div>
+        <div class="floating-card floating-bottom">◉ <span>Complexity: O(log n)</span></div>
+      </div>
+    </section>
+
+    <section class="section algorithms-section" id="algorithms">
+      <div class="section-heading reveal">
+        <div class="eyebrow">THE TOOLKIT</div>
+        <h2>Master the <span class="gradient-text">Algorithms</span></h2>
+        <p>Discover the logic that powers efficient software.</p>
+      </div>
+
+      <div class="algorithm-grid">
+        <article class="algorithm-card reveal">
+          <div class="card-icon purple-icon">↕</div>
+          <div class="tag">SORTING</div>
+          <h3>Bubble Sort</h3>
+          <p>Repeatedly compare adjacent elements and swap them when they are out of order.</p>
+          <div class="card-bottom"><span>Time: O(n²)</span><button class="text-button" data-algo="bubble">Try it ↗</button></div>
+        </article>
+
+        <article class="algorithm-card reveal">
+          <div class="card-icon cyan-icon">⌕</div>
+          <div class="tag">SEARCHING</div>
+          <h3>Binary Search</h3>
+          <p>Find a target in sorted data by repeatedly halving the search interval.</p>
+          <div class="card-bottom"><span>Time: O(log n)</span><button class="text-button" data-algo="binary">Learn more ↗</button></div>
+        </article>
+
+        <article class="algorithm-card reveal">
+          <div class="card-icon orange-icon">⌘</div>
+          <div class="tag">DIVIDE & CONQUER</div>
+          <h3>Merge Sort</h3>
+          <p>Divide the array, sort each part, and merge the sorted results efficiently.</p>
+          <div class="card-bottom"><span>Time: O(n log n)</span><button class="text-button" data-algo="merge">Learn more ↗</button></div>
+        </article>
+
+        <article class="algorithm-card reveal">
+          <div class="card-icon green-icon">▦</div>
+          <div class="tag">DATA STRUCTURES</div>
+          <h3>Graph Traversal</h3>
+          <p>Explore connected nodes using Breadth-First Search or Depth-First Search.</p>
+          <div class="card-bottom"><span>BFS / DFS</span><button class="text-button" data-algo="graph">Learn more ↗</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section visualizer-section" id="visualizer">
+      <div class="section-heading reveal">
+        <div class="eyebrow">INTERACTIVE PLAYGROUND</div>
+        <h2>Watch Algorithms <span class="gradient-text">Think</span></h2>
+        <p>Control the data. Run the algorithm. See every step.</p>
+      </div>
+
+      <div class="visualizer-panel reveal">
+        <div class="visualizer-toolbar">
+          <div class="control-group">
+            <label for="algorithm">ALGORITHM</label>
+            <select id="algorithm">
+              <option value="bubble">Bubble Sort</option>
+              <option value="selection">Selection Sort</option>
+              <option value="insertion">Insertion Sort</option>
+            </select>
+          </div>
+          <div class="control-group size-control">
+            <label for="arraySize">ARRAY SIZE: <span id="sizeValue">35</span></label>
+            <input type="range" id="arraySize" min="10" max="70" value="35">
+          </div>
+          <div class="control-group">
+            <label for="speed">SPEED</label>
+            <select id="speed">
+              <option value="150">Slow</option>
+              <option value="55" selected>Normal</option>
+              <option value="12">Fast</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="visualizer-stats">
+          <div><span>COMPARISONS</span><strong id="comparisons">0</strong></div>
+          <div><span>ARRAY LENGTH</span><strong id="arrayLength">35</strong></div>
+          <div><span>STATUS</span><strong id="sortStatus" class="status-ready">Ready</strong></div>
+        </div>
+
+        <div class="bars-container" id="bars" aria-label="Sorting visualization"></div>
+
+        <div class="legend">
+          <span><i class="legend-bar default-bar"></i>Unsorted</span>
+          <span><i class="legend-bar compare-bar"></i>Comparing</span>
+          <span><i class="legend-bar sorted-bar"></i>Sorted</span>
+        </div>
+
+        <div class="visualizer-actions">
+          <button id="generateBtn" class="secondary-button">↻ New Array</button>
+          <button id="sortBtn" class="primary-button">▶ Start Sorting</button>
+          <button id="resetBtn" class="secondary-button">↺ Reset</button>
+        </div>
+        <p id="visualMessage" class="visual-message" aria-live="polite">Ready to explore. Generate an array or start sorting!</p>
+      </div>
+    </section>
+
+    <section class="section complexity-section" id="complexity">
+      <div class="section-heading reveal">
+        <div class="eyebrow">EFFICIENCY DECODED</div>
+        <h2>Understand <span class="gradient-text">Big O</span></h2>
+        <p>See how an algorithm's workload grows as input size increases.</p>
+      </div>
+
+      <div class="complexity-layout">
+        <div class="complexity-info reveal">
+          <h3>Choose your complexity</h3>
+          <p>Big O notation describes how time or space requirements grow with input size. Select a class to explore it.</p>
+          <div class="complexity-options">
+            <button class="complexity-option active" data-complexity="n1"><span class="complexity-dot green-dot"></span><span><strong>O(1)</strong><small>Constant</small></span><span>↗</span></button>
+            <button class="complexity-option" data-complexity="logn"><span class="complexity-dot cyan-dot"></span><span><strong>O(log n)</strong><small>Logarithmic</small></span><span>↗</span></button>
+            <button class="complexity-option" data-complexity="n"><span class="complexity-dot purple-dot"></span><span><strong>O(n)</strong><small>Linear</small></span><span>↗</span></button>
+            <button class="complexity-option" data-complexity="nlogn"><span class="complexity-dot orange-dot"></span><span><strong>O(n log n)</strong><small>Linearithmic</small></span><span>↗</span></button>
+            <button class="complexity-option" data-complexity="n2"><span class="complexity-dot red-dot"></span><span><strong>O(n²)</strong><small>Quadratic</small></span><span>↗</span></button>
+          </div>
+        </div>
+
+        <div class="chart-panel reveal">
+          <div class="chart-header"><div><span class="eyebrow">GROWTH MODEL</span><h3 id="chartTitle">O(1) — Constant</h3></div><span class="chart-badge">CONCEPTUAL</span></div>
+          <div class="chart-wrap"><canvas id="complexityChart" aria-label="Complexity growth chart"></canvas></div>
+          <div class="chart-explanation" id="chartExplanation">Constant-time operations take roughly the same number of steps as input grows. Example: accessing an array element by index.</div>
+          <div class="chart-footer"><span>Input size (n) →</span><span>Relative work →</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section reveal">
+      <div class="cta-content">
+        <div class="eyebrow">YOUR NEXT STEP</div>
+        <h2>Don't just learn code.<br><span class="gradient-text">Understand its logic.</span></h2>
+        <p>Experiment, compare, and develop your algorithmic thinking.</p>
+        <a href="#visualizer" class="primary-button">Enter the Lab ↗</a>
+      </div>
+      <div class="cta-symbol">◈</div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo"><span>◈</span> AlgoVerse</a>
+    <p>Built for curious minds · AAD / DAA Learning Lab</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
